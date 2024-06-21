@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> searchCep() async {
     final String cep = textCep.text.replaceAll('-', '');
-    const String api = 'https://cep.awesomeapi.com.br/json';
 
     if (!validCep(cep)) {
       showError(
@@ -46,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     try {
-      final response = await http.get(Uri.parse('$api/$cep'));
+      final response =
+          await http.get(Uri.parse('https://cep.awesomeapi.com.br/json/$cep'));
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = json.decode(response.body);
 

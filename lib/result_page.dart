@@ -17,22 +17,22 @@ class ResultPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Endereço: ${cepData['logradouro'] ?? 'Não encontrado'}',
+              'Endereço: ${cepData['address'] ?? 'Não encontrado'}',
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 8),
             Text(
-              'Bairro: ${cepData['bairro'] ?? 'Não encontrado'}',
+              'Bairro: ${cepData['district'] ?? 'Não encontrado'}',
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 8),
             Text(
-              'Cidade: ${cepData['localidade'] ?? 'Não encontrado'}',
+              'Cidade: ${cepData['city'] ?? 'Não encontrado'}',
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 8),
             Text(
-              'Estado: ${cepData['uf'] ?? 'Não encontrado'}',
+              'Estado: ${cepData['state'] ?? 'Não encontrado'}',
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 8),
